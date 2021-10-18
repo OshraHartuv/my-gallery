@@ -2,6 +2,17 @@
 
 renderProjects();
 
+function onSubmitMail() {
+    var email = document.querySelector('.input-email').value
+    var subject= document.querySelector('.input-subject').value
+    var body= document.querySelector('.input-body').value
+    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=oshrartuv@gmail.com&su=${subject}&body=${body}+sent+from+${email}`, '_blank')
+    document.querySelector('.input-email').value = ''
+    document.querySelector('.input-subject').value = ''
+    document.querySelector('.input-body').value = ''
+    openCanvas()
+}
+
 function renderProjects() {
   var progects = getProjects();
   var elProjects = document.querySelector('.bg-light .container').children[1];
@@ -23,12 +34,11 @@ function renderProjects() {
         </div>
         <div class="badge d-flex align-items-center justify-content-center ">`;
     for (var i = 0; i < project.labels.length; i++) {
-      strHtml += `<div class="d-inline p-2"><h5><span class="badge bg-secondary mx-2">${project.labels[i]}</span></h5></div>`;
+      strHtml += `<div class="d-inline p-2"><h5><span class="badge bg-secondary mx-1">${project.labels[i]}</span></h5></div>`;
     }
     strHtml += `</div></div></div>`;
   });
   elProjects.innerHTML = strHtml;
-  console.log('elProjects', elProjects);
 }
 
 function renderModal(projectId) {

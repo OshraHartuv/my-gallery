@@ -1,7 +1,5 @@
 'use strict'
 
-
-
 var gProjects = [
     {
         id: 'mine-sweeper',
@@ -19,9 +17,19 @@ var gProjects = [
         desc: 'Match the photo to the dog breed. and most importantly, remember to love them all!',
         publishedAt:  'September 29th 2021',
         labels:['Quiz', 'Dogs', 'Game'],
-        url: 'https://oshrahartuv.github.io/Minesweeper/'
-    }
+        url: 'https://oshrahartuv.github.io/in-picture/'
+    },
+    {
+        id: 'Touch Nums',
+        name : 'touch-nums',
+        title: 'Let\'s see how fast you can touch all the numbers on the board',
+        desc: 'You can choose between three levels, how fast can you go?',
+        publishedAt:  'September 29th 2021',
+        labels:['Board', 'Game'],
+        url: 'https://oshrahartuv.github.io/in-picture/'
+    },
 ]
+
 
 function getProjects(){
     return gProjects;
