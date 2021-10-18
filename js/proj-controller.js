@@ -7,9 +7,9 @@ function renderProjects() {
   var elProjects = document.querySelector('.bg-light .container').children[1];
   var strHtml = '';
   progects.forEach((project) => {
-    strHtml += `<div class="col-md-4 col-sm-6 portfolio-item">
-        <a class="portfolio-link" data-toggle="modal"
-        href="#" onclick ="onCurrProj(${project.id})">
+    strHtml += `<div class="col-md-4 col-sm-6 portfolio-item" onclick="onCurrProj('${project.id}')">
+    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal" >
+                <div class="portfolio-hover">
           <div class="portfolio-hover">
             <div class="portfolio-hover-content">
               <i class="fa fa-plus fa-3x"></i>
@@ -26,15 +26,16 @@ function renderProjects() {
       strHtml += `<div class="d-inline p-2"><h5><span class="badge bg-secondary mx-2">${project.labels[i]}</span></h5></div>`;
     }
     strHtml += `</div></div>`;
-    renderModal(project.id)
+    // renderModal(project.id)
   });
   elProjects.innerHTML = strHtml;
+  
 }
 
 function onCurrProj(projectId) {
     console.log('yes');
     renderModal(projectId)
-    return `#portfolioModal${projectId}`
+    // return `#portfolioModal${projectId}`
 }
 
 function renderModal(projectId) {
@@ -42,8 +43,7 @@ function renderModal(projectId) {
   console.log(project);
   var elModal = document.querySelector('.portfolio-modal')
   console.log(elModal);
-  var strHtml = `  <div class="portfolio-modal modal fade" id="portfolioModal${project.id}" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog">
+  var strHtml = `<div class="modal-dialog">
     <div class="modal-content">
       <div class="close-modal" data-dismiss="modal">
         <div class="lr">
@@ -69,11 +69,7 @@ function renderModal(projectId) {
   </div>
 </div>
 </div>
-</div>
-</div>
-  `
+</div>`
   elModal.innerHTML= strHtml
   console.log(elModal);
-//   return `href="#portfolioModal${project.id}"`
-
 }
