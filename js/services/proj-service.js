@@ -7,7 +7,7 @@
 
 var gProjects = [
     {
-        id: 'mineSweeper',
+        id: 'mine-sweeper',
         name: 'Minesweeper',
         title:'Be carefull of the mines!',
         desc: 'My first sprint',
@@ -15,3 +15,7 @@ var gProjects = [
         labels: ['Matrix', 'Game']
     }
 ]
+
+function getProjects(){
+    return gProjects;
+}
