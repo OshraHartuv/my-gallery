@@ -20,13 +20,31 @@ var gProjects = [
         url: 'https://oshrahartuv.github.io/in-picture/'
     },
     {
-        id: 'Touch Nums',
-        name : 'touch-nums',
+        id: 'touch-nums',
+        name: 'Touch Nums' ,
         title: 'Let\'s see how fast you can touch all the numbers on the board',
         desc: 'You can choose between three levels, how fast can you go?',
         publishedAt:  'September 29th 2021',
         labels:['Board', 'Game'],
-        url: 'https://oshrahartuv.github.io/in-picture/'
+        url: 'https://oshrahartuv.github.io/touch-nums/'
+    },
+    {
+        id: 'todo',
+        name: 'To-Do Project' ,
+        title: 'You can add your to do list to this website',
+        desc: 'Did you manage to get everything done?',
+        publishedAt:  'October 12th 2021',
+        labels:['List', 'Sort','Filter'],
+        url: 'https://oshrahartuv.github.io/todo/'
+    },
+    {
+        id: 'book-shop',
+        name: 'Book Shop' ,
+        title: 'A place where you can show off your books for sale',
+        desc: 'You can add or update book, add rating or delete existing book. Click on the table head for sorting by title or price',
+        publishedAt:  'October 13th 2021',
+        labels:['Shop', 'Sort','Update'],
+        url: 'https://oshrahartuv.github.io/book-shop/'
     },
 ]
 
